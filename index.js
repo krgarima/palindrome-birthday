@@ -8,10 +8,11 @@ function checkDate() {
 
     const oldNumber = originalNumber(splitNumber);
     const reversedNumber = reverseNum(splitNumber);
+    
     if (oldNumber === reversedNumber) {
         remDays.innerText = "Birthday is a Palindrome."
     } else {
-        difference(oldNumber, reversedNumber);
+        nextPalindromeNumber(oldNumber, reversedNumber);
         remDays.innerText = "Birthday is a NOT Palindrome."
     }
 }
@@ -26,47 +27,39 @@ function reverseNum(num) {
     return j;
 }
 
-function difference(a, b) {
-    let i=0;
-    const date=a[0]+a[1]; const month=a[2]+a[3]; const year=a[4]+a[5]+a[6]+a[7];
-    for(i=year;i<=9999;i++)
-    {
-        if(d<=31)
-        const diff = 
-    }
+function checkPalindrome(a,b)
+{
+    if(originalNumber(a)===reverseNum(b))
+    return
+    remDays.innerText = a + " is Palindrome of "+ b;
 }
 
-// if(num[6]===num[3])
-// {
-//     if(num[7]===num[2])
-//     {
-//         if(num[4]===num[1])
-//         {
-//             if(num[5]===num[0])
-//             console.log("Yes! Entered birthday is a palindrome number");
-//             else
-//             findDifference(num);
-//         }
-//         else
-//         findDifference(num);
-//     }
-//     else
-//     findDifference(num);
-// }
-// else
-// findDifference(num);
-
-//  function findDifference(num)
-//  {
-//     let year=num[0]+num[1]+num[2]+num[3];
-//     let month=num[4]+num[5];
-//     let date=num[6]+num[7];
-//     let i,result=0;
-//     for(i=year ; i<9999;i++)
-//     {
-//         if((date<=31)&&(month<12))
-//         result
-//     }
-//  }   
+function nextPalindromeNumber(a, b) {
+    let i,j,k;
+    const date=Number(a[0]+a[1]); const month=Number(a[2]+a[3]); const year=Number(a[4]+a[5]+a[6]+a[7]);
+    
+    const original = date + month + year;
+    let d = Number(date);
+    for(i=year;i<=5000;i++)
+    {
+        for(j=month;j<=12;j++)
+        {
+            for(k=d;k<=31;k++)
+            {
+                console.log(d+" ");
+                original.toString = k.toString + j.toString + i.toString;
+                reverse = reverseNum(original);
+                console.log(original+ " "+reverse);
+                if(original===reverse)
+                remDays.innerText = reverse + "is next Palindrome of "+date;
+                else
+                remDays.innerText = "couldn't find";
+            }
+            k=1;
+        }
+        j=1;
+    }
+    
+}  
 
 btndate.addEventListener("click", checkDate);
