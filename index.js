@@ -3,17 +3,19 @@ const btndate = document.querySelector('#btn');
 const remDays = document.querySelector('#message');
 
 function checkDate() {
+    
     const oldDate = (inpDate.value).replaceAll("-", "");
     const splitNumber = oldDate.split('');
 
     const oldNumber = originalNumber(splitNumber);
     const reversedNumber = reverseNum(splitNumber);
     
+    remDays.innerText = "Please wait...";
     if (oldNumber === reversedNumber) {
-        remDays.innerText = "Birthday is a Palindrome."
+        remDays.innerText = "Your birthday is a Palindrome."
     } else {
         nextPalindromeNumber(oldNumber, reversedNumber);
-        remDays.innerText = "Birthday is a NOT Palindrome."
+        remDays.innerText = "Sorry! your birthday is a NOT Palindrome."
     }
 }
 

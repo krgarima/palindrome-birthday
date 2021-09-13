@@ -1,0 +1,67 @@
+.header
+{
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: cadetblue;
+    padding: 1rem 1.0rem;
+    color-adjust:rgb(255, 255, 255);
+    /* text-align: center;
+    margin: 2rem 0rem;
+     */
+}
+
+body{
+    background-color: rgb(208, 192, 238);
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic
+}
+
+h1
+{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0rem;
+    padding: 0.5rem 1.0rem;
+    color: rgb(38, 1, 73);;
+}
+
+h2{
+    font-size: 1.8rem;
+    display: block;
+}
+
+.container
+{
+    margin: 1rem 0rem;
+    padding: 0.5rem 1.0rem;
+}
+
+.btn
+{
+    background-color: white;
+    font-size: 1.5rem;
+    color: black;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.result
+{
+    font-size: 1rem;
+    padding: 1.8rem 1.0rem;
+    color: red;
+}
+.result2
+{
+    font-size: 1rem;
+    padding: 1.8rem 1.0rem;
+    color: red;
+}
+
+.btn2
+{
+    background-color: rgb(252, 238, 212);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
