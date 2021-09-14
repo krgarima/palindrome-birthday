@@ -11,7 +11,7 @@
 }
 
 body{
-    background-color: rgb(208, 192, 238);
+    background-color: rgb(233, 224, 250);
     font-size: 2rem;
     text-align: center;
     font-style: italic
@@ -44,6 +44,8 @@ h2{
     color: black;
     text-align: center;
     margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.rem;
 }
 
 .result
@@ -61,7 +63,7 @@ h2{
 
 .btn2
 {
-    background-color: rgb(252, 238, 212);
+    background-color: rgb(250, 238, 216);
     font-size: 1.5rem;
     margin-top: 2rem;
 }

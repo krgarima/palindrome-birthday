@@ -3,7 +3,8 @@ const btndate = document.querySelector('#btn');
 const remDays = document.querySelector('#message');
 
 function checkDate() {
-    
+    if(inpDate===" ")
+    remDays.innerText = "Field is empty. Enter a valid date."
     const oldDate = (inpDate.value).replaceAll("-", "");
     const splitNumber = oldDate.split('');
 
@@ -15,7 +16,7 @@ function checkDate() {
         remDays.innerText = "Your birthday is a Palindrome."
     } else {
         nextPalindromeNumber(oldNumber, reversedNumber);
-        remDays.innerText = "Sorry! your birthday is a NOT Palindrome."
+        remDays.innerText = "Sorry! your birthday is NOT a Palindrome."
     }
 }
 
