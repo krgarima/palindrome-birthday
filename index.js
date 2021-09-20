@@ -39,21 +39,29 @@ function checkPalindrome(a, b) {
 
 // function nextPalindromeNumber(a, b) {
 //     let i,j,k;
-//     const date=Number(a[0]+a[1]); const month=Number(a[2]+a[3]); const year=Number(a[4]+a[5]+a[6]+a[7]);
+//     var original;
+//     const date=Number(a[0]+a[1]); const month=Number(a[2]+a[3]); const year=Number(a[4]+a[5]);
 
-//     const original = date + month + year;
-//     let d = Number(date);
-//     for(i=year;i<=5000;i++)
+//     if((a[0]===0)||(a[2]===0))
+//     original = 0,date + 0,month + year;
+//     else
+//     original = date + month + year;
+//     console.log(date+" "+month+" "+year);
+
+//     let d =date;
+//     for(i=year;i<=99;i++)
 //     {
 //         for(j=month;j<=12;j++)
 //         {
 //             for(k=d;k<=31;k++)
 //             {
-//                 console.log(d+" ");
+//                 //console.log(d+" ");
+//                 if((k<=9) ||(j<=9))
+//                 {k.toString = (0+k).toString;  j.toString = (0+j).toString;}
 //                 original.toString = k.toString + j.toString + i.toString;
 //                 reverse = reverseNum(original);
-//                 console.log(original+ " "+reverse);
-//                 if(original===reverse)
+//                 //console.log(original+ " "+reverse);
+//                 if(Number(original)===Number(reverse))
 //                 remDays.innerText = reverse + "is next Palindrome of "+date;
 //                 else
 //                 remDays.innerText = "couldn't find";
