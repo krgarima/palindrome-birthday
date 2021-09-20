@@ -22,12 +22,12 @@ function checkDate() {
 }
 
 function originalNumber(num) {
-    const i = num[6] + num[7] + num[4] + num[5] + num[0] + num[1] + num[2] + num[3];
+    const i = num[6] + num[7] + num[4] + num[5] + num[2] + num[3];
     return i;
 }
 
 function reverseNum(num) {
-    const j = num[3] + num[2] + num[1] + num[0] + num[5] + num[4] + num[7] + num[6];
+    const j = num[3] + num[2] + num[5] + num[4] + num[7] + num[6];
     return j;
 }
 
