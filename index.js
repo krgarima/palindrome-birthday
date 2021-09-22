@@ -14,8 +14,9 @@ function checkDate() {
         if (Number(oldNumber) === Number(reversedNumber)) {
             remDays.innerText = "Your birthday is a Palindrome."
         } else {
-            //nextPalindromeNumber(oldNumber, reversedNumber);
             remDays.innerText = "Sorry! your birthday is NOT a Palindrome."
+            // var num = nextPalindromeNumber(oldNumber);
+            // remDays.innerText = num;
         }
     } else
         remDays.innerText = "Error: empty field!";
@@ -37,40 +38,46 @@ function checkPalindrome(a, b) {
     remDays.innerText = a + " is Palindrome of " + b;
 }
 
-// function nextPalindromeNumber(a, b) {
-//     let i,j,k;
-//     var original;
-//     const date=Number(a[0]+a[1]); const month=Number(a[2]+a[3]); const year=Number(a[4]+a[5]);
 
-//     if((a[0]===0)||(a[2]===0))
-//     original = 0,date + 0,month + year;
+// function nextPalindromeNumber(a) {
+//     // let i,j,k;
+//     var original=" ";
+
+//     var date=a[0]+a[1]; var month=a[2]+a[3]; var year=a[4]+a[5];
+//     if((Number(a[0])===0)||(Number(a[2])===0))
+//     original = "0"+date + "0"+month + year;
 //     else
 //     original = date + month + year;
-//     console.log(date+" "+month+" "+year);
+//     // console.log(date+" "+month+" "+year);
 
 //     let d =date;
-//     for(i=year;i<=99;i++)
-//     {
-//         for(j=month;j<=12;j++)
+//     // for(var i=year;i<=99;i++)
+//     // {
+//         for(var j=month;j<=12;j++)
 //         {
-//             for(k=d;k<=31;k++)
+//             for(var k=d;k<=31;k++)
 //             {
-//                 //console.log(d+" ");
-//                 if((k<=9) ||(j<=9))
-//                 {k.toString = (0+k).toString;  j.toString = (0+j).toString;}
-//                 original.toString = k.toString + j.toString + i.toString;
+//                 if(Number(k)<=9)
+//                 original= "0"+k + month + year;
+//                 else if(Number(j)<=9)
+//                 original= k + "0"+month + year;
+//                 console.log(k+" "+j+" "+year);
+//                 original = k.toString + j.toString + year;
 //                 reverse = reverseNum(original);
-//                 //console.log(original+ " "+reverse);
+//                 console.log(original+ " "+reverse);
 //                 if(Number(original)===Number(reverse))
-//                 remDays.innerText = reverse + "is next Palindrome of "+date;
+//                 {return Number(original);}
 //                 else
 //                 remDays.innerText = "couldn't find";
+//                 if(Number(k)===31)
+//                 d=1;
 //             }
-//             k=1;
+//             if(Number(j)===12)
+//             month=1;
 //         }
-//         j=1;
-//     }
-
+//         // j=1;
+//     // }
 // }  
+
 
 btndate.addEventListener("click", checkDate);

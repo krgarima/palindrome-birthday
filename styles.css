@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+
+
 .header
 {
     font-size: 1.5rem;
@@ -11,10 +14,10 @@
 }
 
 body{
-    background-color: rgb(233, 224, 250);
     font-size: 2rem;
     text-align: center;
-    font-style: italic
+    font-style: italic;
+    font-family: "Work Sans", sans-serif;
 }
 
 h1
@@ -23,7 +26,8 @@ h1
     text-align: center;
     margin: 2rem 0rem;
     padding: 0.5rem 1.0rem;
-    color: rgb(38, 1, 73);;
+    color: #DB2777;
+    /* background-color: #DB2777; */
 }
 
 h2{
@@ -33,8 +37,9 @@ h2{
 
 .container
 {
-    margin: 1rem 0rem;
-    padding: 0.5rem 1.0rem;
+    /* margin: 1rem 0rem; */
+    padding: 8rem 1.0rem;
+    background-color: #FCE7F3;
 }
 
 .btn
@@ -43,27 +48,34 @@ h2{
     font-size: 1.5rem;
     color: black;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
     border-radius: 0.5rem;
-    padding: 0.rem;
+    /* padding: 1rem; */
 }
+
 
 .result
 {
-    font-size: 1rem;
-    padding: 1.8rem 1.0rem;
-    color: red;
-}
-.result2
-{
-    font-size: 1rem;
-    padding: 1.8rem 1.0rem;
-    color: red;
-}
-
-.btn2
-{
-    background-color: rgb(250, 238, 216);
+    background-color: white;
     font-size: 1.5rem;
     margin-top: 3rem;
+    
 }
+
+footer
+{
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    
+}
+
+.pd
+{
+    padding: 1rem;
+}
+
+img {
+    width: 20px;
+    padding: 1rem 0.2rem;
+  }
