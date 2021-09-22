@@ -12,7 +12,7 @@ function checkDate() {
         const reversedNumber = reverseNum(splitNumber);
 
         if (Number(oldNumber) === Number(reversedNumber)) {
-            remDays.innerText = "Your birthday is a Palindrome."
+            remDays.innerText = "Your birthday is a Palindrome. 🥳"
         } else {
             remDays.innerText = "Sorry! your birthday is NOT a Palindrome."
             // var num = nextPalindromeNumber(oldNumber);
