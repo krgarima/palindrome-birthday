@@ -3,9 +3,7 @@ var clickButton = document.querySelector('#check-btn');
 var nextResult = document.querySelector('#nextDate');
 var prevResult = document.querySelector('#prevDate');
 
-clickButton.addEventListener('click', clickHandler);
-
-function clickHandler()
+function clickHandler(e)
 {
   var birthString = inputDate.value;
   
@@ -19,17 +17,15 @@ function clickHandler()
   };
 
   var isPalindrome = checkpalindromeAllformsData(date);
-  console.log(isPalindrome);
 
   if(isPalindrome)
   nextResult.innerText = "Hurray! Your birthday is a Palindrome 🥳🥳🥳🥳🥳";
   else
   {
     var [counter, nxtDate] = getNextPalindromeDate(date);
-    nextResult.innerText = `The next Palindrome date is ${nxtDate.day}-${nxtDate.month}-${nxtDate.year} You missed it by ${counter} days! `;
+    nextResult.innerText = `The next Palindrome date is ${nxtDate.day}-${nxtDate.month}-${nxtDate.year} You missed it by ${counter} days! 😔`;
     var [counterP, prevDate] = getPreviousPalindromeDate(date);
-    prevResult.innerText = `The previous Palindrome date was ${prevDate.day}-${prevDate.month}-${prevDate.year} You missed it by ${counterP} days! `;
-  
+    prevResult.innerText = `The previous Palindrome date was ${prevDate.day}-${prevDate.month}-${prevDate.year} You missed it by ${counterP} days! 😔`;
   }
 }
 
@@ -206,7 +202,8 @@ function getNextPalindromeDate(date)
     counter++;
     var isPalindrome = checkpalindromeAllformsData(nextDate);
     if(isPalindrome)
-    break;
+    {break;}
+    else
     nextDate = getNextDate(nextDate);
   }
   return [counter, nextDate];
@@ -222,9 +219,11 @@ function getPreviousPalindromeDate(date)
     counterP++;
     var isPalindrome = checkpalindromeAllformsData(previousDate);
     if(isPalindrome)
-    break;
+    {break;}
+    else
     previousDate = getPreviousDate(previousDate);
   }
   return [counterP, previousDate];
 }
 
+clickButton.addEventListener('click', clickHandler);
