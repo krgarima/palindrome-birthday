@@ -27,6 +27,7 @@ function clickHandler(e)
     var [counterP, prevDate] = getPreviousPalindromeDate(date);
     prevResult.innerText = `The previous Palindrome date was ${prevDate.day}-${prevDate.month}-${prevDate.year} You missed it by ${counterP} days! 😔`;
   }
+  // console.log(getPreviousDate(date));
 }
 
 
@@ -172,9 +173,9 @@ function getPreviousDate(date)
   }
   else
   {
-    if(day > daysinMonth[month-1])
+    if(day < 1)
     {
-      day =1;
+      day =daysinMonth[month-2];
       month--;
     }
   }
@@ -183,6 +184,7 @@ function getPreviousDate(date)
   {
     month=12;
     year--;
+    day=31;
   }
 
 return{
@@ -227,3 +229,4 @@ function getPreviousPalindromeDate(date)
 }
 
 clickButton.addEventListener('click', clickHandler);
+
